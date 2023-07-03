@@ -1,0 +1,35 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--unit-8);
+    background-color: var(--color-blue);
+    border: 1px solid var(--color-border-delineation);
+    flex: 1;
+    font-family: var(--typo-main);
+    font-size: var(--unit-16);
+    font-weight: 400;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        background-color: var(--color-yellow);
+    }
+}
+
+.border-radius {
+    &--1 {
+        border-radius: 8px 0 0 0;
+    }
+
+    &--2 {
+        border-radius: 0 8px 0 0;
+    }
+
+    &--3 {
+        border-radius: 0 0 0 8px;
+    }
+    
+    &--4 {
+        border-radius: 0 0 8px 0;
+    }
+}
