@@ -1,0 +1,72 @@
+:root {
+    // colors
+    --color-red:                     #EA2728;
+    --color-redDark:                 #D10001;
+    --color-blue:                    #66B7F6;
+    --color-green:                   #26E348;
+    --color-yellow:                  #F5DF29;
+    --color-white:                   #ffffff;
+    --color-white-transparent:       #ffffff26;
+    --color-black:                   #222222;
+    --color-black-pure:              #000000;
+    --color-black-light:             #414141;
+    --color-black-transparent:       #41414126;
+    --color-grey-light:              #e2e2e2;
+    --color-grey-dark:               #434343;
+
+    //Color applications (non variable):
+    --color-border-delineation:      var(--color-black-pure);
+    --color-btn:                     var(--color-blue);
+    --color-btn-txt:                 var(--color-white);
+
+    //Fonts:
+    --typo-main:                     'Jura', sans-serif;
+
+}
+
+//Color applications (variable):
+[data-theme="light"] {
+    --bg-color-red: var(--color-red);
+    --bg-color-theme: var(--color-white);
+    --bg-color-transparency: var(--color-black-transparent);
+    --color-text: var(--color-black);
+    --color-like: var(--color-grey-light);
+}
+  
+[data-theme="dark"] {
+    --bg-color-red: var(--color-redDark);
+    --bg-color-theme: var(--color-black);
+    --bg-color-transparency: var(--color-white-transparent);
+    --color-text: var(--color-white);
+    --color-like: var(--color-grey-dark);
+}
+
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500&display=swap');
+
+
+* , *::before , *::after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--typo-main);
+    color: var(--color-text);
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: auto;
+    scroll-behavior: smooth;
+    background-color: var(--bg-color-theme);
+    max-width: 100%;
+    cursor: default;
+}  
+
+::selection {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+}
