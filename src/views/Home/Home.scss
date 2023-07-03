@@ -1,0 +1,16 @@
+@import '/src/globalStyles/tools';
+
+.home {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+
+    &--panel {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        width: 100%;
+    }
+}

@@ -1,12 +1,13 @@
 :root {
     // colors
     --color-red:                     #EA2728;
-    --color-redDark:                 #D10001;
+    --color-red-dark:                 #D10001;
     --color-blue:                    #66B7F6;
     --color-green:                   #26E348;
     --color-yellow:                  #F5DF29;
     --color-white:                   #ffffff;
     --color-white-transparent:       #ffffff26;
+    --color-white-transparent50:     #ffffff80;
     --color-black:                   #222222;
     --color-black-pure:              #000000;
     --color-black-light:             #414141;
@@ -22,6 +23,15 @@
     //Fonts:
     --typo-main:                     'Jura', sans-serif;
 
+    //Units:
+    --unit-3:                        0.3rem;
+    --unit-6:                        0.6rem;
+    --unit-8:                        0.8rem;
+    --unit-10:                       1rem;
+    --unit-12:                       1.2rem;
+    --unit-16:                       1.6rem;
+    --unit-24:                       2.4rem;
+    --unit-32:                       3.2rem;
 }
 
 //Color applications (variable):
@@ -34,7 +44,7 @@
 }
   
 [data-theme="dark"] {
-    --bg-color-red: var(--color-redDark);
+    --bg-color-red: var(--color-red-dark);
     --bg-color-theme: var(--color-black);
     --bg-color-transparency: var(--color-white-transparent);
     --color-text: var(--color-white);
