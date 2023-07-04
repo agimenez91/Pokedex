@@ -17,7 +17,7 @@
         overflow: hidden;
         justify-content: space-around;
         border: none;
-        border-left: 1px solid;
+        border-left: 1px solid var(--color-border-delineation);
     }
 
     &--row {

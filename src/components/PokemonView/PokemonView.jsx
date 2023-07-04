@@ -1,4 +1,5 @@
 import Button from '../Atoms/Button/Button'
+import Pagination from '../Atoms/Pagination/Pagination'
 import './PokemonView.scss'
 
 export default function PokemonView (props) {
@@ -31,7 +32,7 @@ export default function PokemonView (props) {
                         <p>info</p>
                     </div>
                 </div>
-                <p>Previous/next</p>
+                <Pagination/>
             </div>
         </>
     )

@@ -47,6 +47,8 @@
 
         .pokemon-card__identifiers {
             order: 2;
+            justify-content: start;
+            gap: var(--unit-16);
         }
 
         .pokemon-card__tags {

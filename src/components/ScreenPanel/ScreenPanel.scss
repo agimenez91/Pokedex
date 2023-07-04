@@ -1,6 +1,6 @@
 @import '/src/globalStyles/tools';
 
-.screenpannel {
+.screenpanel {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: var(--unit-16);
@@ -16,11 +16,15 @@
         background-color: var(--bg-color-theme);
     }
 
-    &.screenpannel--list {
+    &.screenpanel--list {
         grid-template-columns: 1fr;
+        display: grid;
+        gap: var(--unit-16);
+        padding: var(--unit-16);
     }
 
     &:has(.pokemonView) {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex: 1;
     }
 }
