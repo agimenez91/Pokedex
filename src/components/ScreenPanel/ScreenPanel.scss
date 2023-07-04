@@ -1,3 +1,15 @@
 .screenpannel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     flex: 1;
+    padding: var(--unit-16);
+    gap: var(--unit-16);
+
+    &.screenpannel--list {
+        grid-template-columns: 1fr;
+    }
+
+    &:has(.pokemonView) {
+        grid-template-columns: 1fr;
+    }
 }

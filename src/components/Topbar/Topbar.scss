@@ -5,6 +5,9 @@
     display: flex;
     gap: var(--unit-8);
     border-bottom: 4px solid var(--color-border-delineation);
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .camera {
