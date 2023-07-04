@@ -6,7 +6,12 @@ export default function ScreenPanel (props) {
     return (
         <>
             <div className="screenpannel">
-                <PokemonView/>
+                <PokemonCard></PokemonCard>
+                <PokemonCard></PokemonCard>
+                <PokemonCard></PokemonCard>
+                <PokemonCard></PokemonCard>
+                <PokemonCard></PokemonCard>
+
             </div>
         </>
     )

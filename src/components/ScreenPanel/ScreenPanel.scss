@@ -1,9 +1,20 @@
+@import '/src/globalStyles/tools';
+
 .screenpannel {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex: 1;
+    grid-template-columns: repeat(2, 1fr);
     padding: var(--unit-16);
     gap: var(--unit-16);
+
+    @include MQ ($tablet) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include MQ ($desktop) {
+        overflow: scroll;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: var(--bg-color-theme);
+    }
 
     &.screenpannel--list {
         grid-template-columns: 1fr;

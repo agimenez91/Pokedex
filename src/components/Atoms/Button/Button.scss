@@ -33,3 +33,47 @@
         border-radius: 0 0 8px 0;
     }
 }
+
+.btn--like {
+    background-color: var(--color-grey-light);
+    display: inline-block;
+    height: 15px;
+    margin: 0 5px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 15px;
+
+    &:before {
+        top: -7.5px;
+        left: 0;
+    }
+    
+    &:after {
+        left: 7.5px;
+        top: 0;
+    }
+
+    &:hover {
+        background-color: var(--color-red);
+
+        &::before {
+            background-color: var(--color-red);
+        }
+
+        &::after {
+            background-color: var(--color-red);
+        }
+    }
+}
+
+.btn--like:before,
+.btn--like:after {
+    content: "";
+    background-color: var(--color-grey-light);
+    border-radius: 50%;
+    height: 15px;
+    position: absolute;
+    width: 15px;
+}
+

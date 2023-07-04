@@ -1,0 +1,22 @@
+@import '/src/globalStyles/tools';
+
+.body {
+    @include MQ ($desktop) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: url(/src/assets/pokedex\ background_Mesa\ de\ trabajo\ 1.webp);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.gap--16 {
+    gap: var(--unit-16);
+}

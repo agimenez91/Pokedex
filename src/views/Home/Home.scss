@@ -7,6 +7,13 @@
     align-items: center;
     justify-content: space-between;
 
+    @include MQ ($desktop) {
+        justify-content: center;
+        max-width: 90rem;
+        margin: auto;
+    }
+
+
     &--panel {
         display: flex;
         flex-direction: column;
@@ -14,5 +21,17 @@
         width: 100%;
         padding-top: 11.5rem;
         padding-bottom: 11rem;
+
+        @include MQ ($desktop) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+            padding: 0;
+            max-height: 50vh;
+            border-bottom: 1px solid var(--color-border-delineation);
+            border-left: 1px solid var(--color-border-delineation);
+            border-right: 1px solid var(--color-border-delineation);
+            border-radius: 0 0 var(--unit-6) var(--unit-6);
+        }
     }
 }

@@ -1,3 +1,5 @@
+@import '/src/globalStyles/tools';
+
 .pokemon-card {
     background-color: var(--bg-color-transparency);
     display: flex;
@@ -10,6 +12,8 @@
 
     &__img {
         order: 2;
+        display: flex;
+        justify-content: center;
     }
 
     &__img > img {
