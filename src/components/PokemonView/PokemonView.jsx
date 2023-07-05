@@ -1,8 +1,14 @@
+import { useContext } from 'react'
+import { PokemonContext } from '../../context/PokemonContext'
 import Button from '../Atoms/Button/Button'
 import Pagination from '../Atoms/Pagination/Pagination'
 import './PokemonView.scss'
 
-export default function PokemonView (props) {
+export default function PokemonView () {
+
+    const context = useContext(PokemonContext)
+    console.log(context);
+
     return (
         <>
             <div className="pokemonView">
