@@ -79,7 +79,15 @@ html {
     cursor: default;
 }  
 
+//Selection customization:
+
 ::selection {
     background-color: var(--color-yellow);
     color: var(--color-black);
+}
+
+//Scrollbar customization:
+
+::-webkit-scrollbar {
+    display: none;
 }
