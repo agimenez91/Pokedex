@@ -48,7 +48,7 @@ export default function PokemonView () {
                     </div>
                     <div className="pokemonView__row">
                         <p className='title'>Base experience:</p>
-                        <p>{pokemon.base_experience}</p>
+                        <p>{pokemon.base_experience} pt</p>
                     </div>
                     <div className="pokemonView__row">
                         <p className='title'>Weight:</p>
@@ -59,7 +59,7 @@ export default function PokemonView () {
                         {pokemon.abilities && (
                             <div>
                                 {pokemon.abilities.map((ability) => (
-                                    <p className='txt-align--right' key={ability.ability.name}>{ability.ability.name}</p>
+                                    <p className='txt-align--right capitalize' key={ability.ability.name}>{ability.ability.name}</p>
                                 ))}
                             </div>
                         )}
