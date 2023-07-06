@@ -20,3 +20,11 @@
 .gap--16 {
     gap: var(--unit-16);
 }
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.txt-align--right {
+    text-align: right;
+}

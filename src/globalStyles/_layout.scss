@@ -39,6 +39,7 @@
         grid-template-columns: repeat(2, 1fr);
         padding: var(--unit-16);
         gap: var(--unit-16);
+        transition: all 2s ease-in-out;
 
         @include MQ ($tablet) {
             grid-template-columns: repeat(4, 1fr);

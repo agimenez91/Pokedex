@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from '../Atoms/Button/Button';
 import './Commands.scss';
 
@@ -6,7 +7,7 @@ export default function Commands (props) {
         <>
             <div>
                 <div className='flex'>
-                    <Button style="btn border-radius--1" txt="Home"></Button>
+                    <Link className='btn border-radius--1' to='/'>Home</Link>
                     <Button style="btn" txt="Grid"></Button>
                     <Button style="btn border-radius--2" txt="Light Mode"></Button>
                 </div>

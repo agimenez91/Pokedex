@@ -9,7 +9,10 @@
     font-family: var(--typo-main);
     font-size: var(--unit-16);
     font-weight: 400;
+    text-decoration: none;
+    color: var(--color-black);
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 
     &:hover {
         background-color: var(--color-yellow);

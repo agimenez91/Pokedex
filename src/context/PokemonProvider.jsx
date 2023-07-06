@@ -38,11 +38,17 @@ export const PokemonProvider = ({children}) => {
 		getAllPokemons();
 	}, [offset]);
 
+	// BTN CARGAR MÁS
+	const onClickLoadMore = () => {
+		setOffset(offset + 20);
+	};
+
     
     return (
         <PokemonContext.Provider value={{
 				allPokemons,
-				getPokemonByID,			
+				getPokemonByID,	
+				onClickLoadMore,		
         }}>
             {children}
         </PokemonContext.Provider>
