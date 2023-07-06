@@ -64,3 +64,21 @@
 
     }
 }
+
+.pokemon-card__tags .btn--like {
+    height: 10px;
+    margin: 0 5px;
+    width: 10px;
+
+    &:after {
+        height: 10px;
+        width: 10px;
+        left: 6.5px;
+    }
+
+    &:before {
+        height: 10px;
+        width: 10px;
+        top: -6.5px;
+    }
+}
