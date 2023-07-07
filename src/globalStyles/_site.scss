@@ -45,6 +45,7 @@
     --color-text: var(--color-black);
     --color-like: var(--color-grey-light);
     --color-pagination-hover: var(--color-red-dark);
+    --background-desktop: url(/pueblo-paleta.webp);
 }
   
 [data-theme="dark"] {
@@ -54,6 +55,7 @@
     --color-text: var(--color-white);
     --color-like: var(--color-grey-dark);
     --color-pagination-hover: var(--color-yellow);
+    --background-desktop: url(/pueblo-paleta-night.webp);
 }
 
 //Fonts

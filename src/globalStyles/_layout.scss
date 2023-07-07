@@ -11,7 +11,7 @@
     overflow: hidden;
 
     @include MQ ($desktop) {
-        background: url(/pueblo-paleta.webp);
+        background: var(--background-desktop);
         mix-blend-mode: color-burn;
     }
 }
