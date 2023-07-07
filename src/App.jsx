@@ -4,21 +4,50 @@ import PokemonPage from './views/PokemonPage/PokemonPage'
 import Topbar from './components/Topbar/Topbar'
 import Commands from './components/Commands/Commands'
 import { PokemonProvider } from './context/PokemonProvider'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { CommandContext } from './context/CommandContext'
 import Error404 from './views/Eror404/Error404'
 import Home from './views/Home/Home'
 import Favorites from './views/Favorites/Favorites'
 
 function App() {
-  const [theme, setTheme] = useState("light");
-  const [isActive, setIsActive] = useState(false);
-  const [ favourites, setFavourites ] = useState([])
+  // Set theme mode and consult if there's saved info at local storage
+  const [ theme, setTheme ] = useState(() => {
+    const storedtheme = localStorage.getItem('theme');
+    if (storedtheme) {
+      return JSON.parse(storedtheme);
+    }
+    return ['light'];
+  });
+
+  const [ isActive, setIsActive ] = useState(false);
+
+  // Set favorites and consult if there's saved info at local storage
+  const [favourites, setFavourites] = useState(() => {
+    const storedFavourites = localStorage.getItem('favourites');
+    if (storedFavourites) {
+      return JSON.parse(storedFavourites);
+    }
+    return [];
+  });
 
   // Switch screen mode:
   const toggleTheme = () => {
     setTheme((currentTheme) => (currentTheme === "dark" ? "light" : "dark"));
   };
+
+  //Save theme mode in local storage
+  useEffect(() => {
+    localStorage.setItem('theme', JSON.stringify(theme));
+  }, [theme]);
+
+  // Retry theme mode from local storage
+  useEffect(() => {
+    const storedtheme = localStorage.getItem('theme');
+    if (storedtheme) {
+      setTheme(JSON.parse(storedtheme));
+    }
+  }, []);
 
   // Switch pokemon list view:
   const handleView = () => {
@@ -37,6 +66,19 @@ function App() {
       prevFavorites.filter((id) => id !== pokemonId)
     );
   };  
+
+  // Save favorites in local storage
+  useEffect(() => {
+    localStorage.setItem('favourites', JSON.stringify(favourites));
+  }, [favourites]);
+
+  // Retry favorites from local storage
+  useEffect(() => {
+    const storedFavourites = localStorage.getItem('favourites');
+    if (storedFavourites) {
+      setFavourites(JSON.parse(storedFavourites));
+    }
+  }, []);
 
   return (
     <>

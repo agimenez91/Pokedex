@@ -20,3 +20,8 @@ https://dev.to/whitep4nth3r/the-best-lightdark-mode-theme-toggle-in-javascript-3
 Favorites: 
 https://es.react.dev/learn/updating-arrays-in-state
 https://www.youtube.com/watch?v=jc9_Bqzy2YQ
+https://dev.to/annaqharder/how-to-move-item-cards-to-a-favorites-page-in-react-hg5
+
+
+Local Storage:
+https://www.freecodecamp.org/news/how-to-use-localstorage-with-react-hooks-to-set-and-get-items/

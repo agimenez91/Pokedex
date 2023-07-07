@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import Icon from '../Atoms/Icons/Icon';
 import './PokemonCard.scss';
-import AddFavorite from '../Atoms/AddFavorite/AddFavorite';
 import HandleFavorites from '../HandleFavorites/HandleFavorites';
 
 
