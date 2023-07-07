@@ -43,27 +43,6 @@
         inset: 0;
     }
 
-    &.pokemon-card--list {
-        flex-direction: row;
-        gap: var(--unit-16);
-
-        .pokemon-card__img {
-            order: 1;
-            width: 100%;
-            max-width: 6rem;
-        }
-
-        .pokemon-card__identifiers {
-            order: 2;
-            justify-content: start;
-            gap: var(--unit-16);
-        }
-
-        .pokemon-card__tags {
-            order: 3;
-        }
-
-    }
 }
 
 .pokemon-card__tags .btn--like {

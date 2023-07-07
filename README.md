@@ -7,6 +7,9 @@ I usually calculate more styles for all the h tags, but for this project, as I'm
 
 https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content
 
+Contexts:
+https://react.dev/reference/react/createContext
+
 
 theme mode creation:
 https://www.youtube.com/watch?v=VzF2iTTc0MA

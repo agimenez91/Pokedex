@@ -71,6 +71,28 @@
             .pagination--loadMore {
                 grid-column: inherit;
             }
+
+            .pokemon-card {
+                flex-direction: row;
+                gap: var(--unit-16);
+        
+                .pokemon-card__img {
+                    order: 1;
+                    width: 100%;
+                    max-width: 6rem;
+                }
+        
+                .pokemon-card__identifiers {
+                    order: 2;
+                    justify-content: start;
+                    gap: var(--unit-16);
+                }
+        
+                .pokemon-card__tags {
+                    order: 3;
+                }
+        
+            }
         }
 
         &:has(.pokemonView) {
