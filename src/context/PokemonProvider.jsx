@@ -6,7 +6,7 @@ export const PokemonProvider = ({children}) => {
     const [allPokemons, setAllPokemons] = useState([]);
 	const [offset, setOffset] = useState(0);
 
-	// Llamar a los primeros 20 pokemons
+	// Print 20 pokemons:
     const getAllPokemons = async (limit = 20) => {
 		const baseURL = 'https://pokeapi.co/api/v2/';
 
@@ -25,7 +25,7 @@ export const PokemonProvider = ({children}) => {
 		setAllPokemons([...allPokemons, ...results]);
 	};
 
-    // Llamar a un pokemon por ID
+    // Print pokemon by ID:
 	const getPokemonByID = async id => {
 		const baseURL = 'https://pokeapi.co/api/v2/';
 
@@ -34,7 +34,7 @@ export const PokemonProvider = ({children}) => {
 		return data;
 	};
 
-	// Cargar los siguientes 20 pokemons
+	// Load the next 20 pokemons:
 	const onClickLoadMore = () => {
 		setOffset(offset + 20);
 	};

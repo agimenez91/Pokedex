@@ -6,6 +6,7 @@ import { CommandContext } from "../../../context/CommandContext";
 const RemoveFavorite = ({ pokemonId }) => {
     const { removeFavoritePokemon } = useContext(CommandContext);
 
+    // Remove pokemon from favorites:
     const handleRemoveFavorite = () => {
         removeFavoritePokemon(pokemonId);
     };

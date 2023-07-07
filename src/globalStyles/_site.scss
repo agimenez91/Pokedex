@@ -1,7 +1,7 @@
 :root {
-    // colors
+    // Colors:
     --color-red:                     #EA2728;
-    --color-red-dark:                #B20000;
+    --color-red-dark:                #B0152E;
     --color-blue:                    #66B7F6;
     --color-green:                   #26E348;
     --color-yellow:                  #F5DF29;
@@ -15,15 +15,15 @@
     --color-grey-light:              #cccccc;
     --color-grey-dark:               #6c6c6c;
 
-    //Color applications (non variable):
+    // Color applications (static):
     --color-border-delineation:      var(--color-black-pure);
     --color-btn:                     var(--color-blue);
     --color-btn-txt:                 var(--color-white);
 
-    //Fonts:
+    // Fonts:
     --typo-main:                     'Jura', sans-serif;
 
-    //Units:
+    // Units:
     --unit-3:                        0.3rem;
     --unit-6:                        0.6rem;
     --unit-8:                        0.8rem;
@@ -58,7 +58,7 @@
     --background-desktop: url(/pueblo-paleta-night.webp);
 }
 
-//Fonts
+// Fonts import:
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500&display=swap');
 
 
@@ -84,14 +84,12 @@ html {
 }  
 
 //Selection customization:
-
 ::selection {
     background-color: var(--color-yellow);
     color: var(--color-black);
 }
 
 //Scrollbar customization:
-
 ::-webkit-scrollbar {
     display: none;
 }

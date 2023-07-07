@@ -1,5 +1,15 @@
 @import '/src/globalStyles/tools';
 
+.body {
+    @include MQ ($desktop) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+    }
+}
+
 .main {
     background-color: var(--bg-color-theme);
     color: var(--color-text);
@@ -61,6 +71,14 @@
         @include MQ ($desktop) {
             background-color: var(--bg-color-theme);
         }
+
+        &:has(.error404) {
+            align-items: center;
+
+            @media (max-height: 38rem) {
+                align-items: start;
+            }
+        }
     }
 
     &__console {
@@ -91,7 +109,6 @@
 }
 
 //Console decoration:
-
 .decoration {
     display: none;
 

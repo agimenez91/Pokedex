@@ -3,6 +3,7 @@ import './Pagination.scss';
 
 export default function Pagination ({id}) {
 
+    // Set previous and next ID:
     const nextID = id + 1;
     const previousID = id - 1;
 

@@ -12,14 +12,14 @@ export default function Commands (props) {
         <>
             <div>
                 <div className='flex'>
-                    <Link className='btn border-radius--1' to='/'>Home</Link>
-                    <Button style="btn" txt="Grid" click={handleView}></Button>
-                    <Button style="btn border-radius--2" txt="Light Mode" click={toggleTheme}></Button>
+                    <Link aria-label='This link drives you to the home page' className='btn border-radius--1' to='/'>Home</Link>
+                    <Button ariaLabel='This button changes between grid and list pokemon list view' style="btn" txt="Grid/List" click={handleView}></Button>
+                    <Button ariaLabel='This button changes the theme mode' style="btn border-radius--2" txt="Light/Dark" click={toggleTheme}></Button>
                 </div>
                 <div className='flex'>
                     <Link className='btn border-radius--3' to='/Favorites'>Favorites</Link>
-                    <Button style="btn" txt="List" click={handleView}></Button>
-                    <Button style="btn border-radius--4" txt="Dark Mode" click={toggleTheme}></Button>
+                    <Button ariaLabel='This button is disabled' style=" disabled btn"></Button>
+                    <Button ariaLabel='This button is disabled' style=" disabled btn border-radius--4"></Button>
                 </div>
             </div>      
         </>

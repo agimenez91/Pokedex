@@ -6,6 +6,7 @@ import { CommandContext } from "../../../context/CommandContext";
 const AddFavorite = ({ pokemonId }) => {
     const { addFavouritePokemon } = useContext(CommandContext);
 
+    // Add pokemon to favorites:
     const handleAddFavorite = () => {
         addFavouritePokemon(pokemonId);
     };

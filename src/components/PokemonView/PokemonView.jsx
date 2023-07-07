@@ -9,11 +9,10 @@ import HandleFavorites from '../HandleFavorites/HandleFavorites';
 
 export default function PokemonView () {
     const { getPokemonByID } = useContext(PokemonContext);
-
 	const [pokemon, setPokemon] = useState({});
-
 	const { id } = useParams();
 
+    // Fetch Pokemon:
 	const fetchPokemon = async id => {
 		const data = await getPokemonByID(id);
 		setPokemon(data);

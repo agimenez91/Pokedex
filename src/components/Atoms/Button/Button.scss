@@ -19,6 +19,13 @@
     }
 }
 
+.disabled {
+    &:hover {
+        background-color: var(--color-blue);
+        cursor: unset;
+    }
+}
+
 .border-radius {
     &--1 {
         border-radius: 8px 0 0 0;
