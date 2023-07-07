@@ -4,15 +4,14 @@
     background-color: var(--bg-color-theme);
     color: var(--color-text);
     width: 100vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
 
     @include MQ ($desktop) {
         background: var(--background-desktop);
-        mix-blend-mode: color-burn;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
 }
 
@@ -52,58 +51,15 @@
     }
 
     &__screen {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        padding: var(--unit-16);
-        gap: var(--unit-16);
+        display: flex;
         flex: 1;
-
-        @include MQ ($tablet) {
-            grid-template-columns: repeat(4, 1fr);
-        }
-
+        align-items: start;
+        justify-content: center;
+        padding: var(--unit-16);
+        overflow: scroll;
+        
         @include MQ ($desktop) {
-            overflow: scroll;
-            grid-template-columns: repeat(2, 1fr);
             background-color: var(--bg-color-theme);
-        }
-
-        &.screen--list {
-            grid-template-columns: 1fr;
-            display: grid;
-            gap: var(--unit-16);
-            padding: var(--unit-16);
-
-            .pagination--loadMore {
-                grid-column: inherit;
-            }
-
-            .pokemon-card {
-                flex-direction: row;
-                gap: var(--unit-16);
-        
-                .pokemon-card__img {
-                    order: 1;
-                    width: 100%;
-                    max-width: 6rem;
-                }
-        
-                .pokemon-card__identifiers {
-                    order: 2;
-                    justify-content: start;
-                    gap: var(--unit-16);
-                }
-        
-                .pokemon-card__tags {
-                    order: 3;
-                }
-        
-            }
-        }
-
-        &:has(.pokemonView) {
-            display: flex;
-            flex: 1;
         }
     }
 

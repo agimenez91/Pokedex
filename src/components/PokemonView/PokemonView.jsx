@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from 'react';
-import Button from '../Atoms/Button/Button'
 import Pagination from '../Atoms/Pagination/Pagination'
 import './PokemonView.scss'
 import { useParams } from 'react-router-dom';
 import { PokemonContext } from '../../context/PokemonContext';
 import Icon from '../Atoms/Icons/Icon';
+import HandleFavorites from '../HandleFavorites/HandleFavorites';
 
 
 export default function PokemonView () {
@@ -27,9 +27,9 @@ export default function PokemonView () {
     return (
         <>
             <div className="pokemonView">
-                <div className="pokemonView__row">
+                <div className="pokemonView__row flex-align--center">
                     <p>#{pokemon.id}</p>
-                    <Button style="btn--like"/>
+                    <HandleFavorites pokemonId={pokemon.id}/>
                 </div>
                 <div className='pokemonView__img'>
                     <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`} alt={`This is ${pokemon.name}'s picture`} />

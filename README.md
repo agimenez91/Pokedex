@@ -15,3 +15,8 @@ theme mode creation:
 https://www.youtube.com/watch?v=VzF2iTTc0MA
 https://betterprogramming.pub/a-complete-guide-to-implementing-dark-mode-in-react-47af893b22eb
 https://dev.to/whitep4nth3r/the-best-lightdark-mode-theme-toggle-in-javascript-368f
+
+
+Favorites: 
+https://es.react.dev/learn/updating-arrays-in-state
+https://www.youtube.com/watch?v=jc9_Bqzy2YQ

@@ -1,37 +1,55 @@
 import { Route, Routes } from 'react-router-dom'
 import './globalStyles/GlobalStyle.scss'
-import Home from './views/Home'
-import PokemonPage from './views/PokemonPage'
+import PokemonPage from './views/PokemonPage/PokemonPage'
 import Topbar from './components/Topbar/Topbar'
 import Commands from './components/Commands/Commands'
 import { PokemonProvider } from './context/PokemonProvider'
 import { useState } from 'react'
 import { CommandContext } from './context/CommandContext'
 import Error404 from './views/Eror404/Error404'
+import Home from './views/Home/Home'
+import Favorites from './views/Favorites/Favorites'
 
 function App() {
   const [theme, setTheme] = useState("light");
   const [isActive, setIsActive] = useState(false);
+  const [ favourites, setFavourites ] = useState([])
 
+  // Switch screen mode:
   const toggleTheme = () => {
     setTheme((currentTheme) => (currentTheme === "dark" ? "light" : "dark"));
   };
 
+  // Switch pokemon list view:
   const handleView = () => {
     setIsActive(current => !current);
   };
 
+  // Add to favorites:
+  const addFavouritePokemon = (pokemonId) => {
+      const newFavouriteList = [...favourites, pokemonId];
+      setFavourites(newFavouriteList)
+  }
+
+  // Remove from favorites:
+  const removeFavoritePokemon = (pokemonId) => {
+    setFavourites((prevFavorites) =>
+      prevFavorites.filter((id) => id !== pokemonId)
+    );
+  };  
+
   return (
     <>
-      <CommandContext.Provider value={{ theme, toggleTheme, handleView }}>
+      <CommandContext.Provider value={{ theme, toggleTheme, handleView, addFavouritePokemon, removeFavoritePokemon, favourites }}>
         <PokemonProvider>
           <div className="main" data-theme={theme}> 
             <div className="pokedex">
               <Topbar></Topbar>
               <div className='pokedex__area'>
-                <div className={isActive ? 'pokedex__screen screen--list' : 'pokedex__screen'}>
+                <div className='pokedex__screen'>
                   <Routes>
-                    <Route path='/' element={<Home />} />
+                    <Route path='/' element={<Home list={isActive} />} />
+                    <Route path='/Favorites' element={<Favorites list={isActive} />} />
                     <Route path='pokemon/:id/' element={<PokemonPage/>}/>
                     <Route path='*' element={<Error404/>} />
                   </Routes>

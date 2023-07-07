@@ -17,7 +17,7 @@ export default function Commands (props) {
                     <Button style="btn border-radius--2" txt="Light Mode" click={toggleTheme}></Button>
                 </div>
                 <div className='flex'>
-                    <Button style="btn border-radius--3" txt="Favorites"></Button>
+                    <Link className='btn border-radius--3' to='/Favorites'>Favorites</Link>
                     <Button style="btn" txt="List" click={handleView}></Button>
                     <Button style="btn border-radius--4" txt="Dark Mode" click={toggleTheme}></Button>
                 </div>

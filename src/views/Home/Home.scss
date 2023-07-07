@@ -1,0 +1,53 @@
+@import '/src/globalStyles/tools';
+
+.pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--unit-16);
+    flex: 1;
+
+    @include MQ ($tablet) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include MQ ($desktop) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.screen--list {
+        grid-template-columns: 1fr;
+        display: grid;
+        gap: var(--unit-16);
+
+        .pagination--loadMore {
+            grid-column: inherit;
+        }
+
+        .pokemon-card {
+            flex-direction: row;
+            gap: var(--unit-16);
+    
+            .pokemon-card__img {
+                order: 1;
+                width: 100%;
+                max-width: 6rem;
+            }
+    
+            .pokemon-card__identifiers {
+                order: 2;
+                justify-content: start;
+                gap: var(--unit-16);
+            }
+    
+            .pokemon-card__tags {
+                order: 3;
+            }
+    
+        }
+    }
+
+    &:has(.pokemonView) {
+        display: flex;
+        flex: 1;
+    }
+}

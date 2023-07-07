@@ -71,6 +71,18 @@
             background-color: var(--color-red);
         }
     }
+
+    &.active {
+        background-color: var(--color-red);
+
+        &::before {
+            background-color: var(--color-red);
+        }
+
+        &::after {
+            background-color: var(--color-red);
+        }
+    }
 }
 
 .btn--like:before,

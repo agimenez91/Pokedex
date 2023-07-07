@@ -6,7 +6,7 @@ export const PokemonProvider = ({children}) => {
     const [allPokemons, setAllPokemons] = useState([]);
 	const [offset, setOffset] = useState(0);
 
-
+	// Llamar a los primeros 20 pokemons
     const getAllPokemons = async (limit = 20) => {
 		const baseURL = 'https://pokeapi.co/api/v2/';
 
@@ -34,14 +34,14 @@ export const PokemonProvider = ({children}) => {
 		return data;
 	};
 
-    useEffect(() => {
-		getAllPokemons();
-	}, [offset]);
-
-	// BTN CARGAR MÁS
+	// Cargar los siguientes 20 pokemons
 	const onClickLoadMore = () => {
 		setOffset(offset + 20);
 	};
+
+    useEffect(() => {
+		getAllPokemons();
+	}, [offset]);
 
     
     return (

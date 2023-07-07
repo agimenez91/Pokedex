@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import Button from '../Atoms/Button/Button';
 import Icon from '../Atoms/Icons/Icon';
 import './PokemonCard.scss';
+import AddFavorite from '../Atoms/AddFavorite/AddFavorite';
+import HandleFavorites from '../HandleFavorites/HandleFavorites';
 
 
 export default function PokemonCard ({pokemon}) {
@@ -22,7 +23,7 @@ export default function PokemonCard ({pokemon}) {
                             <Icon key={type.type.name} name={type.type.name}></Icon>
                         ))}
                     </div>
-                    <Button style='btn--like' ariaLabel='This is a like button, select it to save your favorite pokemon'/>
+                    <HandleFavorites pokemonId={pokemon.id}/>
                 </div>
                 <Link aria-label={`This link goes to ${pokemon.name}'s page`} className='pokemon-card__url' to={`/pokemon/${pokemon.id}`} />
             </div>
