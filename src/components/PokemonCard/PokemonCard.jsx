@@ -24,7 +24,7 @@ export default function PokemonCard ({pokemon}) {
                     </div>
                     <Button style='btn--like' ariaLabel='This is a like button, select it to save your favorite pokemon'/>
                 </div>
-                <Link className='pokemon-card__url' to={`/pokemon/${pokemon.id}`} />
+                <Link aria-label={`This link goes to ${pokemon.name}'s page`} className='pokemon-card__url' to={`/pokemon/${pokemon.id}`} />
             </div>
         </>
     )

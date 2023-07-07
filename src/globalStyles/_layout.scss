@@ -9,6 +9,11 @@
     background-size: cover;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
+
+    @include MQ ($desktop) {
+        background: url(/pueblo-paleta.webp);
+        mix-blend-mode: color-burn;
+    }
 }
 
 .pokedex {
@@ -51,6 +56,7 @@
         grid-template-columns: repeat(2, 1fr);
         padding: var(--unit-16);
         gap: var(--unit-16);
+        flex: 1;
 
         @include MQ ($tablet) {
             grid-template-columns: repeat(4, 1fr);

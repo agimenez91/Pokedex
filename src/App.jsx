@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import './globalStyles/GlobalStyle.scss'
 import Home from './views/Home'
 import PokemonPage from './views/PokemonPage'
@@ -7,6 +7,7 @@ import Commands from './components/Commands/Commands'
 import { PokemonProvider } from './context/PokemonProvider'
 import { useState } from 'react'
 import { CommandContext } from './context/CommandContext'
+import Error404 from './views/Eror404/Error404'
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -31,8 +32,8 @@ function App() {
                 <div className={isActive ? 'pokedex__screen screen--list' : 'pokedex__screen'}>
                   <Routes>
                     <Route path='/' element={<Home />} />
-                    <Route path='pokemon/:id' element={<PokemonPage/>}/>
-                    <Route path='*' element={<Navigate to='/' />} />
+                    <Route path='pokemon/:id/' element={<PokemonPage/>}/>
+                    <Route path='*' element={<Error404/>} />
                   </Routes>
                 </div>
                 <div className="pokedex__console">
