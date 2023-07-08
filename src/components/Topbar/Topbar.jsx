@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Topbar.scss';
 
-export default function Topbar (props) {
+export default function Topbar () {
     return (
         <>
             <div className="topbar">
