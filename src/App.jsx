@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import './globalStyles/GlobalStyle.scss'
 import PokemonPage from './views/PokemonPage/PokemonPage'
 import Topbar from './components/Topbar/Topbar'
@@ -84,7 +84,7 @@ function App() {
     <>
       <CommandContext.Provider value={{ theme, toggleTheme, handleView, addFavouritePokemon, removeFavoritePokemon, favourites }}>
         <PokemonProvider>
-          <div className="main" data-theme={theme}> 
+          <main className="main" data-theme={theme}> 
             <div className="pokedex">
               <Topbar></Topbar>
               <div className='pokedex__area'>
@@ -94,6 +94,9 @@ function App() {
                     <Route path='/Favorites' element={<Favorites list={isActive} />} />
                     <Route path='pokemon/:id/' element={<PokemonPage/>}/>
                     <Route path='*' element={<Error404/>} />
+                    <Route path="/Favorites" element={<Navigate to="/Favorites"/>} />
+                    <Route path="pokemon/:id/" element={<Navigate to="pokemon/:id/"/>} />
+                    <Route path="*" element={<Navigate to="/404"/>} />
                   </Routes>
                 </div>
                 <div className="pokedex__console">
@@ -115,7 +118,7 @@ function App() {
                 </div>
               </div>
             </div>
-          </div> 
+          </main> 
         </PokemonProvider>
       </CommandContext.Provider>
     </>

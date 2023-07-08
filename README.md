@@ -25,3 +25,12 @@ https://dev.to/annaqharder/how-to-move-item-cards-to-a-favorites-page-in-react-h
 
 Local Storage:
 https://www.freecodecamp.org/news/how-to-use-localstorage-with-react-hooks-to-set-and-get-items/
+
+
+Testing: 
+https://jestjs.io/docs/configuration
+https://jestjs.io/docs/getting-started
+https://github.com/testing-library/react-testing-library
+https://joroji.notion.site/4-Configurando-Jest-a40f4beaa08b449091added60ed2d18c
+https://stackoverflow.com/questions/54461150/jest-not-parsing-es6-syntaxerror-unexpected-token-import
+https://www.youtube.com/watch?v=KYjjtRgg_H0
