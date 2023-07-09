@@ -90,9 +90,7 @@ function App() {
                     <Route path='/' element={<Home list={isActive} />} />
                     <Route path='/Favorites' element={<Favorites list={isActive} />} />
                     <Route path='pokemon/:id/' element={<PokemonPage/>}/>
-                    <Route path='*' element={<Error404/>} />
-                    <Route path="/Favorites" element={<Navigate to="/Favorites"/>} />
-                    <Route path="pokemon/:id/" element={<Navigate to="pokemon/:id/"/>} />
+                    <Route path='/404' element={<Error404/>} />
                     <Route path="*" element={<Navigate to="/404"/>} />
                   </Routes>
                 </div>
