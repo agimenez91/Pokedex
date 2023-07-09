@@ -1,0 +1,28 @@
+@import './tools';
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-size: 2rem;
+    font-weight: 500;
+
+    @include MQ ($tablet) {
+        font-size: 2.2rem;
+    }
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    @include MQ ($tablet) {
+        font-size: 2rem;
+    }
+}
+
+p, .p {
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    @include MQ ($tablet) {
+        font-size: 1.8rem;
+    }
+}

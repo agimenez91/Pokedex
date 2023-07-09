@@ -1,0 +1,168 @@
+@import '/src/globalStyles/tools';
+
+.body {
+    @include MQ ($desktop) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+    }
+}
+
+.main {
+    background-color: var(--bg-color-theme);
+    color: var(--color-text);
+    width: 100vw;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+
+    @include MQ ($desktop) {
+        background: var(--background-desktop);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.pokedex {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+
+    @include MQ ($desktop) {
+        justify-content: center;
+        max-width: 90rem;
+        margin: auto;
+    }
+
+    &__area {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        width: 100%;
+        padding-top: 11.5rem;
+        padding-bottom: 11rem;
+        overflow: scroll;
+
+        @include MQ ($desktop) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+            padding: 0;
+            max-height: 50rem;
+            border-bottom: 1px solid var(--color-border-delineation);
+            border-left: 1px solid var(--color-border-delineation);
+            border-right: 1px solid var(--color-border-delineation);
+            border-radius: 0 0 var(--unit-6) var(--unit-6);
+        }
+    }
+
+    &__screen {
+        display: flex;
+        flex: 1;
+        align-items: start;
+        justify-content: center;
+        padding: var(--unit-16);
+        overflow: scroll;
+        
+        @include MQ ($desktop) {
+            background-color: var(--bg-color-theme);
+        }
+
+        &:has(.error404) {
+            align-items: center;
+
+            @media (max-height: 38rem) {
+                align-items: start;
+            }
+        }
+    }
+
+    &__console {
+        background-color: var(--bg-color-red);
+        width: 100%;
+        padding: var(--unit-16);
+        display: flex;
+        flex-direction: column;
+        border-top: 4px solid var(--color-border-delineation);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        gap: var(--unit-16);
+        z-index: 3;
+    
+        @include MQ ($desktop) {
+            position: inherit;
+            overflow: hidden;
+            justify-content: space-around;
+            border: none;
+            border-left: 1px solid var(--color-border-delineation);
+        }
+    
+        &--row {
+            display: flex;   
+        }
+    }
+}
+
+//Console decoration:
+.decoration {
+    display: none;
+
+    &__row {
+        display: none;
+
+        &--special {
+            display: none;
+        }
+    }
+
+    @include MQ ($desktop) {
+        display: flex;
+        height: var(--unit-32);
+        border-radius: var(--unit-6);
+
+        &__row {
+            display: flex;
+            gap: var(--unit-16);
+            
+            &--special {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        &--black {
+            background-color: var(--color-black);
+            width: 100%;
+            color: white;
+            padding: var(--unit-16);
+            display: flex;
+            overflow: scroll;
+
+            &--big {
+                flex: 1;
+            }
+        }
+
+        &--white {
+            background-color: var(--color-white);
+            width: 12rem;
+            border: 1px solid var(--color-border-delineation);
+            box-shadow: 3px 3px 0px 0px #2222225d;
+        }
+
+        &--yellow {
+            background-color: var(--color-yellow);
+            width: var(--unit-44);
+            height: var(--unit-44);
+            border: 1px solid var(--color-border-delineation);
+            border-radius: 100%;
+        }
+
+    }
+}

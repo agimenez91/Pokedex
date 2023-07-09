@@ -1,0 +1,99 @@
+:root {
+    // Colors:
+    --color-red:                     #EA2728;
+    --color-red-dark:                #B0152E;
+    --color-blue:                    #66B7F6;
+    --color-green:                   #26E348;
+    --color-yellow:                  #F5DF29;
+    --color-white:                   #ffffff;
+    --color-white-transparent:       #ffffff26;
+    --color-white-transparent50:     #ffffff80;
+    --color-white-transparent95:     #fffffff2;
+    --color-black:                   #222222;
+    --color-black-pure:              #000000;
+    --color-black-light:             #414141;
+    --color-black-transparent:       #41414126;
+    --color-black-transparent95:     #222222f2;
+    --color-grey-light:              #cccccc;
+    --color-grey-dark:               #6c6c6c;
+
+    // Color applications (static):
+    --color-border-delineation:      var(--color-black-pure);
+    --color-btn:                     var(--color-blue);
+    --color-btn-txt:                 var(--color-white);
+
+    // Fonts:
+    --typo-main:                     'Jura', sans-serif;
+
+    // Units:
+    --unit-3:                        0.3rem;
+    --unit-6:                        0.6rem;
+    --unit-8:                        0.8rem;
+    --unit-10:                       1rem;
+    --unit-12:                       1.2rem;
+    --unit-16:                       1.6rem;
+    --unit-24:                       2.4rem;
+    --unit-32:                       3.2rem;
+    --unit-38:                       3.8rem;
+    --unit-44:                       4.4rem;
+    --unit-50:                       5rem;
+}
+
+//Color applications (variable):
+[data-theme="light"] {
+    --bg-color-red: var(--color-red);
+    --bg-color-theme: var(--color-white);
+    --bg-color-transparency: var(--color-black-transparent);
+    --color-text: var(--color-black);
+    --color-like: var(--color-grey-light);
+    --color-pagination-hover: var(--color-red-dark);
+    --background-desktop: url(/pueblo-paleta-light.webp);
+    --bg-color-tooltip: var(--color-white-transparent95);
+}
+  
+[data-theme="dark"] {
+    --bg-color-red: var(--color-red-dark);
+    --bg-color-theme: var(--color-black);
+    --bg-color-transparency: var(--color-white-transparent);
+    --color-text: var(--color-white);
+    --color-like: var(--color-grey-dark);
+    --color-pagination-hover: var(--color-yellow);
+    --background-desktop: url(/pueblo-paleta-dark.webp);
+    --bg-color-tooltip: var(--color-black-transparent95);
+}
+
+// Fonts import:
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500&display=swap');
+
+
+* , *::before , *::after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--typo-main);
+    color: var(--color-text);
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: auto;
+    scroll-behavior: smooth;
+    background-color: var(--bg-color-theme);
+    max-width: 100%;
+    cursor: default;
+}  
+
+//Selection customization:
+::selection {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+}
+
+//Scrollbar customization:
+::-webkit-scrollbar {
+    display: none;
+}
