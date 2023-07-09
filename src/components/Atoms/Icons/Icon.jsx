@@ -6,7 +6,7 @@ export default function Icon (props) {
         <>
            {props.name ? (
                 <>
-                    <div className='tooltip'>{IconMap[props.name]}<span className='tooltip__msg'>{props.name}</span></div>
+                    {IconMap[props.name]}
                 </>
             ) : ("")}
         </>

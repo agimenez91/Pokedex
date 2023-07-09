@@ -18,7 +18,7 @@ export default function PokemonCard ({pokemon}) {
                 <div className="pokemon-card__tags">
                     <div className="flex">
                         {pokemon.types.map(type => (
-                            <Icon key={type.type.name} name={type.type.name}></Icon>
+                            <div className='tooltip' key={type.type.name}><Icon key={type.type.name} name={type.type.name}></Icon><span className='tooltip__msg'>{type.type.name}</span></div>
                         ))}
                     </div>
                     <HandleFavorites pokemonId={pokemon.id}/>
