@@ -1,5 +1,7 @@
 # Pokedex
 
+![Pokedex-preview](/pokedex-mockup.webp "Pokedex-preview"){: title="Pokedex-Preview" width="300px"}
+
 [Click para la versión en español](#spanish-version)
 
 ## Table of Contents
