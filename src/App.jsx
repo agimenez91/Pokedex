@@ -98,7 +98,7 @@ function App() {
                 </div>
                 <div className="pokedex__console">
                   <div className="decoration decoration--black decoration--black--big">
-                      <p>La Pokédex es una enciclopedia electrónica que registra información acerca de los Pokémon. Este dispositivo registra datos cuando capturas un Pokémon y muestra su imagen y detalles.</p>
+                      <p>This is the Pokédex.<br/> It automatically records data on Pokémon you've seen or caught. It's a hi-tech encyclopedia!</p>
                   </div>
                   <Commands/>
                   <div className='decoration__row--special'>

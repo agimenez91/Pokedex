@@ -17,3 +17,23 @@
 .flex-align--center {
     align-items: center;
 }
+
+.tooltip {
+    position: relative;
+    z-index: 2;
+
+    &__msg {
+        display: none;
+        position: absolute;
+        top: 1.5em;
+        left: 0;
+        background-color: var(--bg-color-tooltip);
+        padding: var(--unit-3) var(--unit-6);
+        border-radius: var(--unit-3);
+        font-size: 1.6rem;
+    }
+
+    &:hover .tooltip__msg {
+        display: inline-block;
+    }
+}

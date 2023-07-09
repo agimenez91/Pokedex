@@ -8,10 +8,12 @@
     --color-white:                   #ffffff;
     --color-white-transparent:       #ffffff26;
     --color-white-transparent50:     #ffffff80;
+    --color-white-transparent95:     #fffffff2;
     --color-black:                   #222222;
     --color-black-pure:              #000000;
     --color-black-light:             #414141;
     --color-black-transparent:       #41414126;
+    --color-black-transparent95:     #222222f2;
     --color-grey-light:              #cccccc;
     --color-grey-dark:               #6c6c6c;
 
@@ -46,6 +48,7 @@
     --color-like: var(--color-grey-light);
     --color-pagination-hover: var(--color-red-dark);
     --background-desktop: url(/pueblo-paleta.webp);
+    --bg-color-tooltip: var(--color-white-transparent95);
 }
   
 [data-theme="dark"] {
@@ -56,6 +59,7 @@
     --color-like: var(--color-grey-dark);
     --color-pagination-hover: var(--color-yellow);
     --background-desktop: url(/pueblo-paleta-night.webp);
+    --bg-color-tooltip: var(--color-black-transparent95);
 }
 
 // Fonts import:
