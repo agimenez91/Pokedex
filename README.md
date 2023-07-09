@@ -1,5 +1,7 @@
 # Pokedex
 
+![Pokedex-preview](./public/pokedex-preview.png "Pokedex-preview")
+
 [Click para la versión en español](#spanish-version)
 
 ## Table of Contents
