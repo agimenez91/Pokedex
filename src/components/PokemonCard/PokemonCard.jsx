@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom';
-import Icon from '../Atoms/Icons/Icon';
 import './PokemonCard.scss';
-import HandleFavorites from '../HandleFavorites/HandleFavorites';
+import { Link } from 'react-router-dom';
+import { HandleFavorites, Icon } from '../index'
 
 
 export default function PokemonCard ({pokemon}) {

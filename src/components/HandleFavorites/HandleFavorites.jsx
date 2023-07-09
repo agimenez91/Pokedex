@@ -1,7 +1,6 @@
-import { useContext } from "react";
-import { CommandContext } from "../../context/CommandContext";
-import AddFavorite from "../Atoms/AddFavorite/AddFavorite";
-import RemoveFavorite from "../Atoms/RemoveFavorite/RemoveFavorite";
+import { useContext } from 'react';
+import { CommandContext } from '../../context/CommandContext';
+import { AddFavorite, RemoveFavorite } from '../index'
 
 
 export default function HandleFavorites({ pokemonId }) {

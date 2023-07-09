@@ -1,6 +1,6 @@
-import { useContext } from "react";
-import Button from "../Button/Button"
-import { CommandContext } from "../../../context/CommandContext";
+import { useContext } from 'react';
+import { CommandContext } from '../../../context/index';
+import { Button } from '../../index'
 
 
 const RemoveFavorite = ({ pokemonId }) => {

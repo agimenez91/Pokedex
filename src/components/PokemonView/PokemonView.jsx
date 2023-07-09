@@ -1,10 +1,8 @@
-import { useContext, useEffect, useState } from 'react';
-import Pagination from '../Atoms/Pagination/Pagination'
 import './PokemonView.scss'
+import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { PokemonContext } from '../../context/PokemonContext';
-import Icon from '../Atoms/Icons/Icon';
-import HandleFavorites from '../HandleFavorites/HandleFavorites';
+import { HandleFavorites, Icon, Pagination } from '../index'
 
 
 export default function PokemonView () {

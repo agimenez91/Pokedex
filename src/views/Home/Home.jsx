@@ -1,7 +1,7 @@
 import './Home.scss'
 import { useContext, useEffect } from 'react'
-import PokemonCard from '../../components/PokemonCard/PokemonCard'
-import { PokemonContext } from "../../context/PokemonContext"
+import { PokemonContext } from "../../context"
+import { PokemonCard } from '../../components/index';
 
 export default function Home ( props ) {
 

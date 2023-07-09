@@ -1,14 +1,11 @@
-import { Navigate, Route, Routes } from 'react-router-dom'
 import './globalStyles/GlobalStyle.scss'
-import PokemonPage from './views/PokemonPage/PokemonPage'
-import Topbar from './components/Topbar/Topbar'
-import Commands from './components/Commands/Commands'
-import { PokemonProvider } from './context/PokemonProvider'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { CommandContext } from './context/CommandContext'
-import Error404 from './views/Eror404/Error404'
-import Home from './views/Home/Home'
-import Favorites from './views/Favorites/Favorites'
+import { PokemonProvider, CommandContext } from './context/index'
+import { Error404, Home, Favorites, PokemonPage } from './views/index'
+import { Topbar, Commands } from './components/index'
+
+
 
 function App() {
   // Set theme mode and consult if there's saved info at local storage

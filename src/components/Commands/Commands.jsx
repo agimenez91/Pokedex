@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
-import Button from '../Atoms/Button/Button';
 import './Commands.scss';
+import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { CommandContext } from '../../context/CommandContext';
+import { Button } from '../index'
 
 export default function Commands (props) {
 

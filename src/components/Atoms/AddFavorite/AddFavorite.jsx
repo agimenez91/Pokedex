@@ -1,6 +1,6 @@
-import { useContext } from "react";
-import Button from "../Button/Button"
-import { CommandContext } from "../../../context/CommandContext";
+import { useContext } from 'react'
+import Button from '../Button/Button'
+import { CommandContext } from '../../../context/CommandContext'
 
 
 const AddFavorite = ({ pokemonId }) => {

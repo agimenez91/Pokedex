@@ -34,3 +34,7 @@ https://github.com/testing-library/react-testing-library
 https://joroji.notion.site/4-Configurando-Jest-a40f4beaa08b449091added60ed2d18c
 https://stackoverflow.com/questions/54461150/jest-not-parsing-es6-syntaxerror-unexpected-token-import
 https://www.youtube.com/watch?v=KYjjtRgg_H0
+
+
+Archivos barril
+https://flaming.codes/es/posts/barrel-files-in-javascript

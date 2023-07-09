@@ -1,8 +1,7 @@
 import './Favorites.scss'
 import { useContext, useEffect } from 'react'
-import PokemonCard from '../../components/PokemonCard/PokemonCard'
-import { PokemonContext } from "../../context/PokemonContext"
-import { CommandContext } from '../../context/CommandContext';
+import { PokemonContext, CommandContext } from '../../context'
+import { PokemonCard } from '../../components/index';
 
 export default function Favorites ( props ) {
 

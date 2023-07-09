@@ -1,5 +1,5 @@
 import './PokemonPage.scss'
-import PokemonView from '../../components/PokemonView/PokemonView';
+import { PokemonView } from '../../components/index'
 
 export default function PokemonPage () {
     
